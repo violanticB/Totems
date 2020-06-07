@@ -1,0 +1,4 @@
+name: Totems
+version: 0.1
+main: net.violantic.totem.core.TotemPlugin
+description: Custom totem plugin that handles animation and mechanics
