@@ -31,13 +31,13 @@ public class BlockPlaceListener implements Listener {
 
                 HealthTotem healthTotem = new HealthTotem(event.getPlayer(), centered);
                 plugin.getTotemManager().createTotem(healthTotem);
-                System.out.println("Placing totem");
+
             } else if(event.getBlock().getType() == Material.OBSIDIAN) {
                 event.getBlock().setType(Material.AIR);
 
                 VoidTotem voidTotem = new VoidTotem(event.getPlayer(), centered);
                 plugin.getTotemManager().createTotem(voidTotem);
-                System.out.println("Placing totem");
+
             } else if(event.getBlock().getType() == Material.COAL_BLOCK) {
                 event.getBlock().setType(Material.AIR);
 
