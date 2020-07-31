@@ -78,7 +78,7 @@ public class TotemBuilder {
             return;
         }
 
-        int interval = (buildTime / totemField.getComponents().size());
+        int interval = buildTime / totemField.getComponents().size();
         System.out.println(totemField.getComponents().size());
 
         new BukkitRunnable() {
@@ -121,7 +121,7 @@ public class TotemBuilder {
             return;
         }
 
-        int interval = (buildTime / (totem.getTotemBlocks().size()));
+        int interval = buildTime / totem.getTotemBlocks().size();
         new BukkitRunnable() {
 
             int index = totem.getTotemBlocks().size() - 1;
@@ -129,7 +129,7 @@ public class TotemBuilder {
             @Override
             public void run() {
 
-                if(totem.getTotemBlocks().size() == 0 || (index - 1) < 0) {
+                if(totem.getTotemBlocks().size() == 0 || index < 0) {
                     totem.unregisterMechanics();
                     cancel();
                     return;
