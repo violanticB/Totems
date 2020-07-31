@@ -25,9 +25,6 @@ public class BlockPlaceListener implements Listener {
     @EventHandler
     public void onBlockPlace(BlockPlaceEvent event) {
         if(!event.getBlockPlaced().getLocation().subtract(0, 1, 0).getBlock().getType().equals(Material.AIR)) {
-
-            System.out.println("True");
-
             Location block = event.getBlock().getLocation();
             Location centered = new Location(block.getWorld(), block.getX() + 0.5, block.getY(), block.getZ() + 0.5);
             if(event.getBlock().getType() == Material.STONE) {
