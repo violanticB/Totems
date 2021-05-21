@@ -14,7 +14,7 @@ import java.util.Set;
 
 public class Totem {
 
-    private Player owner;
+    private UUID owner;
 
     private Location location;
     private List<Block> totemBlocks;
@@ -23,7 +23,7 @@ public class Totem {
     private int decayTime;
 
     public Totem(Player owner, Location location) {
-        this.owner = owner;
+        this.owner = owner.getUniqueId();
         this.location = location;
         this.totemBlocks = new ArrayList<>();
         this.totemMechanics = new HashSet<>();
@@ -31,7 +31,7 @@ public class Totem {
     }
 
     public Player getOwner() {
-        return owner;
+        return Bukkit.getPlayer(owner);
     }
 
     public Location getLocation() {
